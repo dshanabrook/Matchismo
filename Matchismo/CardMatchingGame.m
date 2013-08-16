@@ -1,0 +1,70 @@
+    //
+    //  CardMatchingGame.m
+    //  Matchismo
+    //
+    //  Created by dhs on 8/14/13.
+    //  Copyright (c) 2013 david hilton shanabrook. All rights reserved.
+    //
+
+#import "CardMatchingGame.h"
+
+@interface CardMatchingGame();
+
+@property (readwrite, nonatomic) int score;
+    //the cards we are using
+@property   (strong, nonatomic) NSMutableArray *cards; // of Card (in the array)
+@end
+
+@implementation CardMatchingGame
+
+- (NSMutableArray *) cards
+{ if (!_cards) _cards = [[NSMutableArray alloc] init];
+    return _cards;
+}
+
+
+-(id) initWithCardCount:(NSInteger) count
+              usingDeck:(Deck *) deck {
+    self = [super init];
+    
+    if (self) {
+        for (int i=0; i < count; i++){
+            Card *card =  [deck drawRandomCard];
+            if (!card)
+                self = nil;
+            else
+                self.cards[i] = card;
+        }
+    }
+    return self;
+}
+
+-(Card *)cardAtIndex:(NSInteger)index{
+
+    return (index < [self.cards count]) ? self.cards[index] : nil;
+        // return self.cards[index];
+}
+
+-(void) flipCardAtIndex:(NSInteger)index{
+    
+    Card *card = [self cardAtIndex:index];
+    if (!card.unplayable) {
+        if (!card.faceUp)
+            for (Card *otherCard in self.cards) {
+                if (otherCard.isFaceUp && !otherCard.isUnplayable){
+                    int matchScore = [card match:@[otherCard]];
+                    if (matchScore) {
+                        otherCard.unplayable = YES;
+                        card.unplayable = YES;
+                        self.score += matchScore;
+                    }
+                
+            }
+        card.faceUp = !card.faceUp;
+        
+        
+    }
+    }
+}
+
+@end
