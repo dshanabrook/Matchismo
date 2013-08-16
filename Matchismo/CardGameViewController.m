@@ -61,7 +61,7 @@
     
     if (!sender.selected){
     
-   comm     [sender setTitle:[self.deck drawRandomCard].contents forState:(UIControlStateSelected)];
+   [sender setTitle:[self.deck drawRandomCard].contents forState:(UIControlStateSelected)];
     }
 
     sender.selected = !sender.selected;
