@@ -40,16 +40,21 @@
 }
 
 -(Card *)cardAtIndex:(NSInteger)index{
-
+    
     return (index < [self.cards count]) ? self.cards[index] : nil;
         // return self.cards[index];
 }
 
+#define FLIP_COST 1
+#define MISMATCH_PENALTY 2
+#define MATCH_BONUS 4
+
 -(void) flipCardAtIndex:(NSInteger)index{
     
     Card *card = [self cardAtIndex:index];
-    if (!card.unplayable) {
-        if (!card.faceUp)
+    
+    if (!card.isUnplayable) {
+        if (!card.isFaceUp){
             for (Card *otherCard in self.cards) {
                 if (otherCard.isFaceUp && !otherCard.isUnplayable){
                     int matchScore = [card match:@[otherCard]];
@@ -57,13 +62,16 @@
                         otherCard.unplayable = YES;
                         card.unplayable = YES;
                         self.score += matchScore;
+                    } else {
+                        otherCard.faceUp = NO;
+                        self.score -= MISMATCH_PENALTY;
                     }
-                
+                    
+                }
             }
+            self.score -= FLIP_COST;
+        }
         card.faceUp = !card.faceUp;
-        
-        
-    }
     }
 }
 

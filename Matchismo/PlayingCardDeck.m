@@ -20,6 +20,8 @@
                 PlayingCard *card = [[PlayingCard alloc] init];
                 card.rank = rank;
                 card.suit = suit;
+                NSArray *rankStrings = [PlayingCard rankStrings];
+               card.contents = [rankStrings[rank] stringByAppendingString:suit];
                     // card.faceUp = NO;
                 [self addCard:card atTop:YES];
             }
