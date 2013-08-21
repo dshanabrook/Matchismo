@@ -202,6 +202,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XU5-gO-wVu">
+                                <rect key="frame" x="197" y="439" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Again Again!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -539,12 +547,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Ma-oP-WgU">
+                                <rect key="frame" x="196" y="469" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Again Again!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="d0A-7b-3au"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Emotion Game" id="7Es-Mh-FYK"/>
                     <connections>
                         <outlet property="flipsLabel" destination="wDG-eb-vaS" id="Fb8-l7-Fhp"/>
+                        <outlet property="playAgain" destination="8Ma-oP-WgU" id="eas-pd-QLe"/>
                         <outlet property="scoreLabel" destination="6FS-j5-a0d" id="zYo-LU-9Sd"/>
                         <outletCollection property="cardButtons" destination="8Ws-n3-Jgl" id="MmX-W6-VZ5"/>
                         <outletCollection property="cardButtons" destination="uBI-O8-aod" id="BH4-Fl-lqk"/>
