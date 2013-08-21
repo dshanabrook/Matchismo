@@ -19,7 +19,7 @@
 @property (nonatomic) int   flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
-@property (weak, nonatomic) IBOutlet UIButton *playAgain;
+@property (weak, nonatomic) IBOutlet UIButton *deal;
 
 @end
 
@@ -56,7 +56,7 @@
     _flipCount = flipCount;
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
 }
-- (IBAction)playAgain:(UIButton *)sender {
+- (IBAction)deal:(UIButton *)sender {
     self.game=nil;
     [self updateUI];
 }

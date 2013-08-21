@@ -560,7 +560,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playAgain:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="d0A-7b-3au"/>
+                                    <action selector="deal:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="Lx5-f1-18Y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -568,8 +568,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Emotion Game" id="7Es-Mh-FYK"/>
                     <connections>
+                        <outlet property="deal" destination="8Ma-oP-WgU" id="MIx-lV-je7"/>
                         <outlet property="flipsLabel" destination="wDG-eb-vaS" id="Fb8-l7-Fhp"/>
-                        <outlet property="playAgain" destination="8Ma-oP-WgU" id="eas-pd-QLe"/>
                         <outlet property="scoreLabel" destination="6FS-j5-a0d" id="zYo-LU-9Sd"/>
                         <outletCollection property="cardButtons" destination="8Ws-n3-Jgl" id="MmX-W6-VZ5"/>
                         <outletCollection property="cardButtons" destination="uBI-O8-aod" id="BH4-Fl-lqk"/>
