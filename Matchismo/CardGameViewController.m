@@ -13,8 +13,6 @@
 
 @interface CardGameViewController ()
 
-    //weak because if card disappears we dont care about the label
-    //iboutlet, ibaction are nothings
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
 @property (weak,nonatomic) IBOutlet UILabel *scoreLabel;
@@ -33,21 +31,18 @@
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                           usingDeck:[[PlayingCardDeck alloc] init]];
+        //[[PlayingCardDeck alloc] init]];
     return _game;
 }
 
     //setter
 - (void) setCardButtons:(NSArray *)cardButtons{
-    
     _cardButtons = cardButtons;
-        //make the UI use the cards
-           [self updateUI];
+    [self updateUI];
     
-
 }
 
 -(void) updateUI {
-        //reflect model in ui.  can do any time
     for (UIButton *cardButton in self.cardButtons){
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
@@ -55,7 +50,6 @@
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable ;
         cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;
-        
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
 }

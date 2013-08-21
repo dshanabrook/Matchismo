@@ -23,6 +23,7 @@
                 NSArray *rankStrings = [PlayingCard rankStrings];
                card.contents = [rankStrings[rank] stringByAppendingString:suit];
                     // card.faceUp = NO;
+                    //warning
                 [self addCard:card atTop:YES];
             }
         }
