@@ -14,6 +14,7 @@
 @interface CardGameViewController ()
 
     //weak because if card disappears we dont care about the label
+
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (nonatomic) int flipCount;
