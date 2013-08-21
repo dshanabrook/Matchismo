@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
     </dependencies>
     <scenes>
-        <!--Card Game View Controller - game one-->
+        <!--Card Game View Controller - Card Game-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CardGameViewController" sceneMemberID="viewController">
@@ -205,7 +205,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="game one" id="etb-Zh-B34"/>
+                    <tabBarItem key="tabBarItem" title="Card Game" id="etb-Zh-B34"/>
                     <connections>
                         <outlet property="flipsLabel" destination="5BH-jC-on4" id="4Dw-K1-IbS"/>
                         <outlet property="scoreLabel" destination="e0O-d5-QhR" id="znH-8t-zh6"/>
@@ -248,12 +248,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJE-Sc-tYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="131"/>
+            <point key="canvasLocation" x="-105" y="30"/>
         </scene>
-        <!--Card Game View Controller - Item-->
+        <!--Picture Game View Controller - Emotion Game-->
         <scene sceneID="o2n-8Q-xCm">
             <objects>
-                <viewController id="hRN-rA-Hlt" customClass="CardGameViewController" sceneMemberID="viewController">
+                <viewController id="hRN-rA-Hlt" customClass="PictureGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TDL-OM-qtT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,6 +265,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="irE-OY-zld"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lb5-Ov-69Y">
                                 <rect key="frame" x="180" y="50" width="30" height="30"/>
@@ -273,6 +276,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="HxR-4n-i1L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gKs-ec-yVc">
                                 <rect key="frame" x="102" y="50" width="30" height="30"/>
@@ -281,6 +287,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="ciS-I3-5VZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fRg-6k-k1G">
                                 <rect key="frame" x="263" y="50" width="30" height="30"/>
@@ -289,6 +298,10 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpOutside" id="XNX-AI-HAc"/>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="xNA-1b-rAf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="laG-Ih-kg7">
                                 <rect key="frame" x="31" y="101" width="30" height="30"/>
@@ -297,6 +310,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="xBi-ev-yF5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7rH-7F-fAF">
                                 <rect key="frame" x="180" y="101" width="30" height="30"/>
@@ -305,6 +321,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="9Y7-dL-0pZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sbd-4P-428">
                                 <rect key="frame" x="102" y="101" width="30" height="30"/>
@@ -313,6 +332,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="NBC-K4-JpX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="szD-BX-zO7">
                                 <rect key="frame" x="263" y="101" width="30" height="30"/>
@@ -321,6 +343,10 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="UJp-B3-6mv"/>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpOutside" id="nT6-7X-2Fk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sqg-jM-Lt5">
                                 <rect key="frame" x="29" y="161" width="30" height="30"/>
@@ -329,6 +355,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="S0W-M7-sTY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O6U-Wz-5I9">
                                 <rect key="frame" x="178" y="161" width="30" height="30"/>
@@ -337,6 +366,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="nSc-z6-ppx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fh5-JI-A0p">
                                 <rect key="frame" x="100" y="161" width="30" height="30"/>
@@ -345,6 +377,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="OU7-He-HLl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bcn-3O-fSB">
                                 <rect key="frame" x="261" y="161" width="30" height="30"/>
@@ -353,6 +388,10 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="6ep-J2-45l"/>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpOutside" id="e2R-fH-58d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FMg-hQ-4LS">
                                 <rect key="frame" x="29" y="222" width="30" height="30"/>
@@ -361,6 +400,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="3l2-JF-Awx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V1E-cx-haj">
                                 <rect key="frame" x="178" y="222" width="30" height="30"/>
@@ -369,6 +411,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="o1u-JZ-rQP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EBg-LX-Njk">
                                 <rect key="frame" x="100" y="222" width="30" height="30"/>
@@ -377,6 +422,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="yzc-pf-x3v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bN-SN-6Lf">
                                 <rect key="frame" x="261" y="222" width="30" height="30"/>
@@ -385,6 +433,10 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="LGY-zn-JDe"/>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpOutside" id="SLR-SV-w5h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ld0-Hq-2fG">
                                 <rect key="frame" x="29" y="280" width="30" height="30"/>
@@ -393,6 +445,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="t9Y-K1-hb8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9i6-CU-sfI">
                                 <rect key="frame" x="178" y="280" width="30" height="30"/>
@@ -401,6 +456,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="Gsg-Wn-z8H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bFe-Vb-dVu">
                                 <rect key="frame" x="100" y="280" width="30" height="30"/>
@@ -409,6 +467,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="nlo-Pc-4jq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="44B-f4-cGG">
                                 <rect key="frame" x="261" y="280" width="30" height="30"/>
@@ -417,6 +478,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="FqI-0Y-ccT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GDT-tT-ptA">
                                 <rect key="frame" x="31" y="342" width="30" height="30"/>
@@ -425,6 +489,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="nH7-Rg-AI3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8hw-Hx-h2Q">
                                 <rect key="frame" x="180" y="342" width="30" height="30"/>
@@ -433,6 +500,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="8jQ-Wo-P6M"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yZX-0H-PDN">
                                 <rect key="frame" x="102" y="342" width="30" height="30"/>
@@ -441,6 +511,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="caQ-Eq-QaE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Ws-n3-Jgl">
                                 <rect key="frame" x="263" y="342" width="30" height="30"/>
@@ -449,6 +522,9 @@
                                 <state key="normal" title="⌘">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flipCard:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="rq0-z8-qjq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6FS-j5-a0d">
                                 <rect key="frame" x="102" y="407" width="80" height="21"/>
@@ -458,7 +534,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wDG-eb-vaS">
-                                <rect key="frame" x="14" y="478" width="42" height="21"/>
+                                <rect key="frame" x="14" y="478" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -466,7 +542,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="7Es-Mh-FYK"/>
+                    <tabBarItem key="tabBarItem" title="Emotion Game" id="7Es-Mh-FYK"/>
                     <connections>
                         <outlet property="flipsLabel" destination="wDG-eb-vaS" id="Fb8-l7-Fhp"/>
                         <outlet property="scoreLabel" destination="6FS-j5-a0d" id="zYo-LU-9Sd"/>
@@ -494,12 +570,11 @@
                         <outletCollection property="cardButtons" destination="GDT-tT-ptA" id="qHR-DV-yAP"/>
                         <outletCollection property="cardButtons" destination="yZX-0H-PDN" id="bAD-Z0-iDT"/>
                         <outletCollection property="cardButtons" destination="8hw-Hx-h2Q" id="sf5-vy-Ljt"/>
-                        <outletCollection property="cardButtons" destination="8Ws-n3-Jgl" id="jJ2-df-x19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9PM-Lf-xMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="375"/>
+            <point key="canvasLocation" x="323" y="604"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

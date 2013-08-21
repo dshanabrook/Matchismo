@@ -13,12 +13,11 @@
 
 @interface PictureGameViewController ()
 
-    //weak because if card disappears we dont care about the label
+//weak because if card disappears we dont care about the label
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int   flipCount;
-    //@property (weak,nonatomic) IBOutlet UIButton *playAgain;
-
+//@property (weak,nonatomic) IBOutlet UIButton *playAgain;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 
@@ -58,7 +57,6 @@
 }
 
 - (IBAction)flipCard:(UIButton *)sender {
-        //self.cardbuttons is the array of buttons,
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipCount++;
     [self updateUI];

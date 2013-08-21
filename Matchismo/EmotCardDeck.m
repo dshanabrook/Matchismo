@@ -11,7 +11,8 @@
 
 @implementation EmotCardDeck
 
--(id) initWithCardCount:(NSInteger) count {self = [super init];
+-(id) initWithCardCount:(NSInteger) count {
+    self = [super init];
     if (self) {    
         int halfCount = count/2;    
         for (int index = 0; index < halfCount; index++){                        

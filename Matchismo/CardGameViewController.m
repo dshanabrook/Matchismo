@@ -13,11 +13,10 @@
 
 @interface CardGameViewController ()
 
-
+    //weak because if card disappears we dont care about the label
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (nonatomic) int flipCount;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-
+@property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
     //don't need to be this specific.  not using suit/rank
@@ -32,7 +31,6 @@
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                           usingDeck:[[PlayingCardDeck alloc] init]];
-        //[[PlayingCardDeck alloc] init]];
     return _game;
 }
 
