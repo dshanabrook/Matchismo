@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (nonatomic) int flipCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (weak, nonatomic) IBOutlet UIButton *deal;
 
     //don't need to be this specific.  not using suit/rank
     //drawRandomCard is a deck not playcarddeck method
@@ -67,5 +68,9 @@
     [self updateUI];
 }
 
+- (IBAction)deal:(UIButton *)sender {
+    self.game=nil;
+    [self updateUI];
+}
 
 @end

@@ -209,12 +209,17 @@
                                 <state key="normal" title="Again Again!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deal:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="KyC-ik-KDQ"/>
+                                    <action selector="deal:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oid-Lk-MMK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card Game" id="etb-Zh-B34"/>
                     <connections>
+                        <outlet property="deal" destination="XU5-gO-wVu" id="Tx2-tc-MdV"/>
                         <outlet property="flipsLabel" destination="5BH-jC-on4" id="4Dw-K1-IbS"/>
                         <outlet property="scoreLabel" destination="e0O-d5-QhR" id="znH-8t-zh6"/>
                         <outletCollection property="cardButtons" destination="1VD-o1-U33" id="CdV-IR-Vzj"/>
