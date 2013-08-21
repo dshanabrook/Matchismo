@@ -29,6 +29,7 @@
 		79C8E9B517BB15EB001D7836 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */; };
 		79D9DF8A17BBF91400B47771 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D9DF8917BBF91400B47771 /* CardMatchingGame.m */; };
 		79DA163417C46E7B00C77860 /* EmotCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DA163317C46E7B00C77860 /* EmotCardDeck.m */; };
+		79DA163A17C472A600C77860 /* PictureGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DA163917C472A600C77860 /* PictureGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		79D9DF8917BBF91400B47771 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		79DA163217C46E7B00C77860 /* EmotCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotCardDeck.h; sourceTree = "<group>"; };
 		79DA163317C46E7B00C77860 /* EmotCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotCardDeck.m; sourceTree = "<group>"; };
+		79DA163817C472A600C77860 /* PictureGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureGameViewController.h; sourceTree = "<group>"; };
+		79DA163917C472A600C77860 /* PictureGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 		79C6FB3217BA81B10022BB4E /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				79DA163817C472A600C77860 /* PictureGameViewController.h */,
+				79DA163917C472A600C77860 /* PictureGameViewController.m */,
 				7925F9BC17B9B7270007B877 /* CardGameViewController.h */,
 				7925F9BD17B9B7270007B877 /* CardGameViewController.m */,
 			);
@@ -328,6 +333,7 @@
 				79C8E9B217BB0F54001D7836 /* Deck.m in Sources */,
 				79DA163417C46E7B00C77860 /* EmotCardDeck.m in Sources */,
 				79C6FB3517BA835A0022BB4E /* Card.m in Sources */,
+				79DA163A17C472A600C77860 /* PictureGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
