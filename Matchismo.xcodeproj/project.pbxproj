@@ -28,6 +28,7 @@
 		79C8E9B217BB0F54001D7836 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C8E9B117BB0F54001D7836 /* Deck.m */; };
 		79C8E9B517BB15EB001D7836 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */; };
 		79D9DF8A17BBF91400B47771 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D9DF8917BBF91400B47771 /* CardMatchingGame.m */; };
+		79DA163417C46E7B00C77860 /* EmotCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DA163317C46E7B00C77860 /* EmotCardDeck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 		79D9DF8817BBF91400B47771 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		79D9DF8917BBF91400B47771 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
+		79DA163217C46E7B00C77860 /* EmotCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotCardDeck.h; sourceTree = "<group>"; };
+		79DA163317C46E7B00C77860 /* EmotCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotCardDeck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +186,11 @@
 				79C8E9B017BB0F54001D7836 /* Deck.h */,
 				79C8E9B117BB0F54001D7836 /* Deck.m */,
 				79C6FB3617BA88A10022BB4E /* PlayingCard.h */,
+				79C6FB3717BA88A10022BB4E /* PlayingCard.m */,
 				7938C00317C46B8A000D8CBB /* EmotCard.h */,
 				7938C00417C46B8A000D8CBB /* EmotCard.m */,
-				79C6FB3717BA88A10022BB4E /* PlayingCard.m */,
+				79DA163217C46E7B00C77860 /* EmotCardDeck.h */,
+				79DA163317C46E7B00C77860 /* EmotCardDeck.m */,
 				79C8E9B317BB15EB001D7836 /* PlayingCardDeck.h */,
 				79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */,
 				79D9DF8817BBF91400B47771 /* CardMatchingGame.h */,
@@ -321,6 +326,7 @@
 				79D9DF8A17BBF91400B47771 /* CardMatchingGame.m in Sources */,
 				79C8E9B517BB15EB001D7836 /* PlayingCardDeck.m in Sources */,
 				79C8E9B217BB0F54001D7836 /* Deck.m in Sources */,
+				79DA163417C46E7B00C77860 /* EmotCardDeck.m in Sources */,
 				79C6FB3517BA835A0022BB4E /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
