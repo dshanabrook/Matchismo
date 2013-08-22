@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GenericViewController.h"
 
-@interface PictureGameViewController : UIViewController
 
+@interface PictureGameViewController : GenericViewController
+-(void) updateUI ;
+-(CardMatchingGame *) game;
 @end

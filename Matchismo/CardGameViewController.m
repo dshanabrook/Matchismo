@@ -8,41 +8,23 @@
 
 #import "CardGameViewController.h"
 #import "PlayingCardDeck.h"
-#import "CardMatchingGame.h"
 
 
 @interface CardGameViewController ()
 
-    //weak because if card disappears we dont care about the label
-
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (nonatomic) int flipCount;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (weak, nonatomic) IBOutlet UIButton *deal;
-
-    //don't need to be this specific.  not using suit/rank
-    //drawRandomCard is a deck not playcarddeck method
-    //@property (strong, nonatomic) PlayingCardDeck *deck;
-@property (strong, nonatomic) CardMatchingGame *game;
 
 @end
 
 @implementation CardGameViewController
 
+@synthesize game = _game;
+
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                          usingDeck:[[PlayingCardDeck alloc] init]];
+        usingDeck:[[PlayingCardDeck alloc] init]];
+    
     return _game;
 }
-
-    //setter
-- (void) setCardButtons:(NSArray *)cardButtons{
-    _cardButtons = cardButtons;
-    [self updateUI];
-    
-}
-
 -(void) updateUI {
     for (UIButton *cardButton in self.cardButtons){
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
@@ -53,25 +35,9 @@
         cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
-}
-
-
-- (void) setFlipCount:(int)flipCount{
-    _flipCount = flipCount;
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
 }
 
-- (IBAction)flipCard:(UIButton *)sender
-{
-    //self.cardbuttons is the array of buttons,
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    self.flipCount++;
-    [self updateUI];
-}
 
-- (IBAction)deal:(UIButton *)sender {
-    self.game=nil;
-    [self updateUI];
-}
 
 @end

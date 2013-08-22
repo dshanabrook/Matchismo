@@ -25,19 +25,13 @@
 
 @implementation PictureGameViewController
 
+@synthesize game = _game;
+
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
                                                           usingDeck:[[EmotCardDeck alloc]initWithCardCount:[self.cardButtons count]]];
     return _game;
 }
-
-
-    //setter
-- (void) setCardButtons:(NSArray *)cardButtons{
-    _cardButtons = cardButtons;
-    [self updateUI];
-}
-
 
 -(void) updateUI {
     for (UIButton *cardButton in self.cardButtons){
@@ -51,25 +45,4 @@
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
         //    [self.newGame setTitle:@"again again" forState: UIControlStateNormal] ;
 }
-
-- (void) setFlipCount:(int)flipCount{
-    _flipCount = flipCount;
-    self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
-}
-- (IBAction)deal:(UIButton *)sender {
-    self.game=nil;
-    [self updateUI];
-}
-
-
-- (IBAction)flipCard:(UIButton *)sender {
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    self.flipCount++;
-    [self updateUI];
-}
-
-    //- (IBAction)newGame:(UIButton *) sender
-    //{
-    //}
-
 @end
