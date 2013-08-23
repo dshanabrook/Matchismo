@@ -1,27 +1,27 @@
-//
-//  CardGameViewController.m
-//  Matchismo
-//
-//  Created by dhs on 8/12/13.
-//  Copyright (c) 2013 david hilton shanabrook. All rights reserved.
-//
+    //
+    //  setGameViewController.m
+    //  Matchismo
+    //
+    //  Created by dhs on 8/12/13.
+    //  Copyright (c) 2013 david hilton shanabrook. All rights reserved.
+    //
 
-#import "CardGameViewController.h"
-#import "PlayingCardDeck.h"
+#import "SetGameViewController.h"
+#import "SetCardDeck.h"
 
 
-@interface CardGameViewController ()
+@interface SetGameViewController ()
 
 
 @end
 
-@implementation CardGameViewController
+@implementation SetGameViewController
 
 @synthesize game = _game;
 
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                          usingDeck:[[PlayingCardDeck alloc] init]];
+                                                          usingDeck:[[SetCardDeck alloc] init]];
     
     return _game;
 }
