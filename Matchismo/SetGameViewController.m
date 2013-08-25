@@ -28,11 +28,10 @@
 -(void) updateUI {
     for (UIButton *cardButton in self.cardButtons){
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
-        [cardButton setTitle:card.contents forState:UIControlStateSelected];
-        [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
+        [cardButton setAttributedTitle:card.attributedContents forState:UIControlStateSelected];
+        [cardButton setAttributedTitle:card.attributedContents forState:UIControlStateSelected|UIControlStateDisabled];
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable ;
-        cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];

@@ -19,7 +19,7 @@
 }
 
 +(NSArray *) validColors {
-    return @[@"red", @"blue", @"yellow"];
+    return @[@"green", @"blue", @"red"];
 }
 
 +(NSArray *) validNumbers {
@@ -27,7 +27,7 @@
 }
 
 +(NSArray *) validShadings {
-    return @[@0.25, @0.5, @0.75];
+        return @[@0.1, @0.5, @1.0];
 }
 
 -(NSString *) symbol {return _symbol ? _symbol:@"?";}
