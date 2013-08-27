@@ -10,6 +10,7 @@
 #import "PictureGameViewController.h"
 #import "EmotCardDeck.h"
 #import "CardMatchingGame.h"
+#import "GenericViewController.h"
 
 @interface PictureGameViewController ()
 
@@ -29,7 +30,7 @@
 
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                          usingDeck:[[EmotCardDeck alloc]initWithCardCount:[self.cardButtons count]]];
+                                                          usingDeck:[[EmotCardDeck alloc]initWithCardCount:[self.cardButtons count] matchThree:self.playingMatchThree]];
     return _game;
 }
 

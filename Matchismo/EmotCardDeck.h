@@ -9,5 +9,6 @@
 #import "deck.h"
 
 @interface EmotCardDeck : Deck
--(id) initWithCardCount:(NSInteger) count;
+-(id) initWithCardCount:(NSInteger) count
+      matchThree:(BOOL) playingMatchThree;
 @end

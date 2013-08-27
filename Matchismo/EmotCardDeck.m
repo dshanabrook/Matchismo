@@ -11,21 +11,29 @@
 
 @implementation EmotCardDeck
 
--(id) initWithCardCount:(NSInteger) count {
+-(id) initWithCardCount:(NSInteger) count
+             matchThree:(BOOL) playingMatchThree;{
     self = [super init];
-    if (self) {    
-        int halfCount = count/2;    
-        for (int index = 0; index < halfCount; index++){                        
-            EmotCard *card = [[EmotCard alloc] init];        
-            NSString *emot = [EmotCard validEmots][index];        
-            card.emot = emot;        
-            card.contents = emot;        
-            [self addCard:card atTop:YES];
-            EmotCard *card2 = [[EmotCard alloc] init];
-            card2.emot = emot;
-            card2.contents = emot;
-            [self addCard:card2 atTop:YES];
+    int cardSetSize = 1;
+    if (!playingMatchThree){
+        cardSetSize = 2;
+    }
+    else {
+        cardSetSize = 3;
+    }
+    
+    if (self) {
+        int portionCount = count/cardSetSize;
+        for (int j = 0; j < portionCount; j++){
+            NSString *emot = [EmotCard validEmots][j];
+            for (int k = 0; k < cardSetSize; k++){
+                EmotCard *card = [[EmotCard alloc] init];
+                card.emot = emot;
+                card.contents = emot;
+                [self addCard:card atTop:YES];
             }
+            
+        }
     }
     return self;
 }
