@@ -36,7 +36,9 @@
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
-}
+        //  if (self.playingMatchThree){
+        //   [matchThreeButton ]
+    }
 
 
 

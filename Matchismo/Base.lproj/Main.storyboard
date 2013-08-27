@@ -189,7 +189,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5BH-jC-on4">
-                                <rect key="frame" x="20" y="439" width="91" height="21"/>
+                                <rect key="frame" x="20" y="447" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -203,7 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XU5-gO-wVu">
-                                <rect key="frame" x="197" y="439" width="97" height="30"/>
+                                <rect key="frame" x="197" y="444" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Again Again!">
@@ -214,6 +214,17 @@
                                     <action selector="deal:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oid-Lk-MMK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JrL-EQ-O3p">
+                                <rect key="frame" x="92" y="416" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Match three?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="matchThreeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="z2X-Ts-4rX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -221,6 +232,7 @@
                     <connections>
                         <outlet property="deal" destination="XU5-gO-wVu" id="Tx2-tc-MdV"/>
                         <outlet property="flipsLabel" destination="5BH-jC-on4" id="4Dw-K1-IbS"/>
+                        <outlet property="matchThreeButton" destination="JrL-EQ-O3p" id="qJn-9x-8Kz"/>
                         <outlet property="scoreLabel" destination="e0O-d5-QhR" id="znH-8t-zh6"/>
                         <outletCollection property="cardButtons" destination="1VD-o1-U33" id="CdV-IR-Vzj"/>
                         <outletCollection property="cardButtons" destination="uJn-Xu-EMm" id="zzc-oP-XEO"/>
@@ -564,6 +576,18 @@
                                     <action selector="deal:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="Lx5-f1-18Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZYM-vj-2kb">
+                                <rect key="frame" x="92" y="489" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Match three?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="matchThreeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8VX-mh-Pnh"/>
+                                    <action selector="matchThreeButton:" destination="hRN-rA-Hlt" eventType="touchUpInside" id="QUY-Cd-stv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -571,6 +595,7 @@
                     <connections>
                         <outlet property="deal" destination="8Ma-oP-WgU" id="MIx-lV-je7"/>
                         <outlet property="flipsLabel" destination="wDG-eb-vaS" id="Fb8-l7-Fhp"/>
+                        <outlet property="matchThreeButton" destination="ZYM-vj-2kb" id="39o-Ky-Dla"/>
                         <outlet property="scoreLabel" destination="6FS-j5-a0d" id="zYo-LU-9Sd"/>
                         <outletCollection property="cardButtons" destination="8Ws-n3-Jgl" id="MmX-W6-VZ5"/>
                         <outletCollection property="cardButtons" destination="uBI-O8-aod" id="BH4-Fl-lqk"/>
@@ -853,6 +878,17 @@
                                 </state>
                                 <connections>
                                     <action selector="flipCard:" destination="7xh-ut-kxu" eventType="touchUpInside" id="u47-yQ-mcJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DO6-p8-u4G">
+                                <rect key="frame" x="92" y="479" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Match three?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="matchThreeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rhM-kv-E14"/>
                                 </connections>
                             </button>
                         </subviews>

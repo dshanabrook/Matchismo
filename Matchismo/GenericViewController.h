@@ -15,6 +15,7 @@
 @interface GenericViewController : UIViewController
 
 @property (nonatomic) int flipCount;
+@property (nonatomic) BOOL playingMatchThree;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 
@@ -22,6 +23,7 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UIButton *matchThreeButton;
 
 -(void) setFlipCount:(int)flipCount;
 
@@ -32,5 +34,7 @@
 -(IBAction)deal:(UIButton *)sender;
 
 -(void)updateUI;
+
+-(IBAction) matchThreeButton:(UIButton *) sender;
 
 @end

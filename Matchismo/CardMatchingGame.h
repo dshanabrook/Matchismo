@@ -18,7 +18,7 @@
 -(id) initWithCardCount:(NSInteger) count
               usingDeck:(Deck *) deck;
 
-- (void) flipCardAtIndex:(NSInteger) index;
+- (void) flipCardAtIndex:(NSInteger) index matchThree:(BOOL) playingMatchThree;
 
 - (Card *) cardAtIndex :(NSInteger) index;
 
