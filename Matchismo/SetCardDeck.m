@@ -38,6 +38,7 @@
                             color = [UIColor redColor];
                          else
                             color = [UIColor blackColor];
+                        
                         color = [color colorWithAlphaComponent:[indexShading floatValue]];
                         
                         NSString *symbols = indexSymbol;
@@ -50,7 +51,7 @@
                         
                         card.faceUp = NO;
                         card.attributedContents = symbolsAttributed;
-                        
+        
                         [self addCard:card atTop:YES];
                         totCards++;
                     }

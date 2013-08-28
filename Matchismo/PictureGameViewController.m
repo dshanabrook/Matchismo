@@ -32,7 +32,8 @@
 
 -(CardMatchingGame *) game {
     if (!_game) _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                          usingDeck:[[EmotCardDeck alloc]initWithCardCount:[self.cardButtons count] matchThree:self.playingMatchThree]];
+                                                          usingDeck:[[EmotCardDeck alloc]initWithCardCount:[self.cardButtons count]
+                                                                                                matchThree:self.playingMatchThree]];
     return _game;
 }
 
@@ -44,6 +45,7 @@
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable ;
         cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;
+
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
         //    [self.newGame setTitle:@"again again" forState: UIControlStateNormal] ;

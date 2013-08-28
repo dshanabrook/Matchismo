@@ -50,7 +50,7 @@
     }
 }
 
-    //a better match than card
+    //overrideing card match
 -(int) match:(NSArray *)otherCards
 {
     int score = 0;

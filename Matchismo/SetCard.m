@@ -27,7 +27,7 @@
 }
 
 +(NSArray *) validShadings {
-        return @[@0.1, @0.5, @1.0];
+        return @[@0.05, @0.4, @1.0];
 }
 
 -(NSString *) symbol {return _symbol ? _symbol:@"?";}
@@ -50,7 +50,7 @@
 }
 -(void) setShading:(NSNumber *) shading{
     if ([[SetCard validShadings] containsObject:shading]) {
-        shading = shading;
+        _shading = shading;
     }
     
 }
@@ -60,6 +60,24 @@
     }
     
 
+}
+
+    //overrideing card match
+-(int) match:(NSArray *)otherCards
+{
+    int score = 0;
+    if (otherCards.count == 1){
+        SetCard *otherCard = [otherCards lastObject];
+        if (otherCard.color != self.color &&
+            otherCard.shading != self.shading &&
+            otherCard.number != self.number &&
+            otherCard.symbol != self.symbol){
+            score = 10;
+        
+        }}
+
+    return score;
+    
 }
 
 

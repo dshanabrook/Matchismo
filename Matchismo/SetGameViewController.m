@@ -31,10 +31,13 @@
         [cardButton setAttributedTitle:card.attributedContents forState:UIControlStateSelected];
         [cardButton setAttributedTitle:card.attributedContents forState:UIControlStateSelected|UIControlStateDisabled];
         cardButton.selected = card.isFaceUp;
-        cardButton.enabled = !card.isUnplayable ;
+        cardButton.enabled = !card.isUnplayable;
+        if (card.unplayable)
+            cardButton.alpha = 0.0;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
+    self.playingMatchThree = YES;
 }
 
 
