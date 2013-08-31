@@ -18,8 +18,16 @@
     return @[@"▲",@"●", @"■"];
 }
 
-+(NSArray *) validColors {
-    return @[@"green", @"blue", @"red"];
+    +(NSArray *) validColors {
+       return @[@"green", @"blue", @"red"];
+    }
+
++(NSDictionary *) validColorsDict {
+    return @{@"green": [UIColor greenColor],
+             @"red": [UIColor redColor],
+             @"blue":  [UIColor blueColor]
+             };
+             
 }
 
 +(NSArray *) validNumbers {

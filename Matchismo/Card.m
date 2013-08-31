@@ -13,6 +13,7 @@
 -(int) match:(NSArray *)otherCards {
     int score = 0;
     for (Card *card in otherCards)
+            //            if (otherCards isKindOfClass:(PlayingCard)){
         if ([card.contents isEqualToString:self.contents])
             score = 1;
     return score;

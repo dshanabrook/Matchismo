@@ -14,10 +14,17 @@
 -(id) init {
     self = [super init];
     
+//    NSDictionary * validColorsDict =
+//         @{@"green": [UIColor greenColor],
+//                 @"red": [UIColor redColor],
+//                 @"blue":  [UIColor blueColor]
+//                 };
+    
+    
     int totCards = 0;
     
     if (self) {
-        for (NSString *indexColor in [SetCard validColors]){
+        for (NSString *indexColor in [SetCard validColorsDict]){
             for (NSString *indexSymbol in [SetCard validSymbols]){
                 for (NSNumber *indexNumber in [SetCard validNumbers]){
                     for (NSNumber *indexShading in [SetCard validShadings]){
@@ -29,15 +36,16 @@
                         card.color = indexColor;
                         card.shading = indexShading;
                         
-                        UIColor *color = nil;
-                        if ([indexColor  isEqual: @"green"])
-                            color = [UIColor greenColor];
-                         else if ([indexColor  isEqual: @"blue"])
-                            color = [UIColor blueColor];
-                         else if ([indexColor  isEqual: @"red"])
-                            color = [UIColor redColor];
-                         else
-                            color = [UIColor blackColor];
+                        
+                                                  UIColor *color = [UIColor greenColor];
+//                        if ([indexColor  isEqual: @"green"])
+//                            color = [UIColor greenColor];
+//                         else if ([indexColor  isEqual: @"blue"])
+//                            color = [UIColor blueColor];
+//                         else if ([indexColor  isEqual: @"red"])
+//                            color = [UIColor redColor];
+//                         else
+//                            color = [UIColor blackColor];
                         
                         color = [color colorWithAlphaComponent:[indexShading floatValue]];
                         

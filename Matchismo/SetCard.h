@@ -15,11 +15,14 @@
 @property (strong, nonatomic) NSString *symbol;
 @property (strong, nonatomic) NSNumber *shading;
 @property (strong, nonatomic) NSNumber *number;
+    //@property (strong, nonatomic) NSDictionary * validColorsDict;
 
 
 +(NSArray *) validColors;
 +(NSArray *) validSymbols;
 +(NSArray *) validShadings;
 +(NSArray *) validNumbers;
++(NSDictionary *) validColorsDict;
+
 
 @end
