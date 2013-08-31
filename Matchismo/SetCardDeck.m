@@ -19,7 +19,7 @@
 //                 @"red": [UIColor redColor],
 //                 @"blue":  [UIColor blueColor]
 //                 };
-    
+    NSDictionary * colorDict = [SetCard validColorsDict];
     
     int totCards = 0;
     
@@ -37,7 +37,7 @@
                         card.shading = indexShading;
                         
                         
-                                                  UIColor *color = [UIColor greenColor];
+                        UIColor *color = [SetCard validColorsDict][indexColor];
 //                        if ([indexColor  isEqual: @"green"])
 //                            color = [UIColor greenColor];
 //                         else if ([indexColor  isEqual: @"blue"])
