@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *answerField;
+@property (weak, nonatomic) IBOutlet UITextField *oneAnswer;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *deal;

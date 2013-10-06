@@ -26,6 +26,8 @@
 -(void) updateUI {
     for (UIButton *cardButton in self.cardButtons){
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+        int index = [self.answerField indexOfObject:cardButton];
+            //       self.answerField[index].text = card.answerView;
             //   [cardButton setTitle:card.answerView forState:UIControlStateNormal];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
@@ -35,9 +37,8 @@
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips:%d", self.flipCount];
-                            
-    [self.answerField firstObject] ;
-    
-}
+    UITextField *answer1 = self.oneAnswer;
+    NSString *a = answer1.text;
+    }
 
 @end
