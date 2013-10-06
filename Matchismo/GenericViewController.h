@@ -18,6 +18,8 @@
 @property (nonatomic) BOOL playingMatchThree;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *answerField;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *deal;
 @property (strong, nonatomic) CardMatchingGame *game;

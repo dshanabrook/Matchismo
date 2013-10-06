@@ -14,16 +14,6 @@
 
 @interface PictureGameViewController ()
 
-//weak because if card disappears we dont care about the label
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
-@property (nonatomic) int   flipCount;
-
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-
-@property (strong, nonatomic) CardMatchingGame *game;
-@property (weak, nonatomic) IBOutlet UIButton *deal;
-
 @end
 
 @implementation PictureGameViewController
@@ -40,8 +30,11 @@
 -(void) updateUI {
     for (UIButton *cardButton in self.cardButtons){
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
+        [cardButton setTitle:card.answerView forState:UIControlStateHighlighted];
+        [cardButton setTitle:card.answerView forState:UIControlStateNormal];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
+            //     card.faceUp = YES;
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable ;
         cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;

@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) NSString *suit;
 @property (nonatomic) NSUInteger rank;
+@property (strong, nonatomic) NSDictionary *validColorsDict;
+
 
 +(NSArray *) rankStrings;
 +(NSArray *) validSuits;

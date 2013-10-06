@@ -31,11 +31,11 @@
 }
 
 +(NSArray *) validNumbers {
-    return @[@1, @2, @3];
+    return @[@.5, @1, @2];
 }
 
 +(NSArray *) validShadings {
-        return @[@0.05, @0.4, @1.0];
+        return @[@1, @2, @3];
 }
 
 -(NSString *) symbol {return _symbol ? _symbol:@"?";}
@@ -78,7 +78,7 @@
         SetCard *otherCard = [otherCards lastObject];
         if (otherCard.color != self.color &&
             otherCard.shading != self.shading &&
-            otherCard.number != self.number &&
+            //    otherCard.number != self.number &&
             otherCard.symbol != self.symbol){
             score = 10;
         

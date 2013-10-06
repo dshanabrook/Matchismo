@@ -39,6 +39,7 @@
     return self;
 }
 
+
 -(Card *)cardAtIndex:(NSInteger)index{
     
     return (index < [self.cards count]) ? self.cards[index] : nil;

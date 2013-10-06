@@ -8,7 +8,7 @@
 
 #import "GenericViewController.h"
 #import "CardMatchingGame.h"
-
+#import "textField.h"
 
 @interface GenericViewController ()
 
@@ -19,14 +19,11 @@
 - (void) setCardButtons:(NSArray *)cardButtons{
     _cardButtons = cardButtons;
     [self updateUI];
-    
 }
-
 
 
 - (void) setFlipCount:(int)flipCount{
     _flipCount = flipCount;
-    
 }
 
 - (IBAction)flipCard:(UIButton *)sender

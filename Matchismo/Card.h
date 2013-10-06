@@ -11,13 +11,11 @@
 @interface Card : NSObject
 
 @property (strong, nonatomic) NSString *contents;
-@property (strong, nonatomic) NSAttributedString *attributedContents;
-
+@property (strong, nonatomic) NSString *answerView;
 @property (nonatomic, getter = isFaceUp) BOOL faceUp;
 @property (nonatomic, getter = isUnplayable) BOOL unplayable;
 
 - (int) match:(NSArray *) otherCards;
-- (int) attributedMatch:(NSArray *) otherCards;
 
 
 @end
