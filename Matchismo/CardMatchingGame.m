@@ -50,12 +50,13 @@
 #define MISMATCH_PENALTY 2
 #define MATCH_BONUS 4
 
--(void) flipCardAtIndex:(NSInteger)index matchThree:(BOOL) playingMatchThree {
+-(void) flipCardAtIndex:(NSInteger)index matchThree:
+                        (BOOL) playingMatchThree {
     
     Card *card = [self cardAtIndex:index];
     BOOL matchedOneAlready = NO;
     Card *otherOtherCard = nil;
-    
+        
     if (!playingMatchThree){
         if (!card.isUnplayable) {
             if (!card.isFaceUp){

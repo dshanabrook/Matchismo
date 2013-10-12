@@ -13,6 +13,8 @@
 @synthesize firstTerm = _firstTerm;
 @synthesize secondTerm = _secondTerm;
 @synthesize operator = _operator;
+@synthesize validOperators ;
+
 
 +(NSArray *) validFirstTerms {
     return @[@"0",@"1",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
@@ -22,10 +24,10 @@
     return @[@"0",@"1",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
 }
 
-+(NSArray *) validOperators {
-    return @[@"+",@"-",@"x"];
-}
++(NSMutableArray *) validOperators {
+    return [[NSMutableArray alloc] initWithObjects:nil];}
     //,@"÷"
+
 
 
 -(NSString *) firstTerm {return _firstTerm ? _firstTerm:@"0";}
@@ -66,5 +68,15 @@
     }
     self.answer = theAnswer;
 }
+
+-(void) addOperator:(NSString *) thisOperator{
+    if (!self.validOperators) {
+        self.validOperators = [[NSMutableArray alloc]init];
+    }
+    [self.validOperators addObject:thisOperator];
+    
+}
+
+
 
 @end
