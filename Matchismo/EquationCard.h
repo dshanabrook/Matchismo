@@ -18,7 +18,9 @@
 
 +(NSArray *) validFirstTerms;
 +(NSArray *) validSecondTerms;
+    //+(NSMutableArray *) validOperators;
 +(NSMutableArray *) validOperators;
+
 
 -(void) calculateAnswer;
 

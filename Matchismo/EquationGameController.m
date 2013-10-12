@@ -28,7 +28,7 @@
 }
 
 - (IBAction)addition:(id)sender{
-    [self.game];
+    self.game.operation = @"+";
 }
 
 - (IBAction)subtraction:(id)sender{

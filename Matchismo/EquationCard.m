@@ -24,10 +24,13 @@
     return @[@"0",@"1",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
 }
 
-+(NSMutableArray *) validOperators {
-    return [[NSMutableArray alloc] initWithObjects:nil];}
-    //,@"÷"
+    //+(NSMutableArray *) validOperators {
+    //    return [[NSMutableArray alloc] initWithObjects:nil];}
 
++(NSArray *) validOperators {
+    return @[@"+",@"-",@"x"];
+}
+  //,@"÷"
 
 
 -(NSString *) firstTerm {return _firstTerm ? _firstTerm:@"0";}
