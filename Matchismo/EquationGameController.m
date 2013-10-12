@@ -108,8 +108,6 @@
           }
                           completion:^(BOOL finished)
           {
-          if(finished)
-              NSLog(@"Hurray. Label fadedIn & fadedOut");
           }];
          }
      }];

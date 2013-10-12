@@ -58,6 +58,7 @@
     
     if ([card.answerView isEqualToString:enteredAnswer]){
         card.unplayable = YES;
+        card.contents = [card.contents stringByAppendingString:card.answerView];
         self.score += MATCH_BONUS;
         self.enteredAnswerIsCorrect = YES;
     }
