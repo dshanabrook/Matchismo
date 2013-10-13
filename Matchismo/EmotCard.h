@@ -10,7 +10,7 @@
 
 @interface EmotCard : Card
     //@property (strong, nonatomic) NSString *emot;
-@property NSString * emot;
+@property NSString *emot;
 
 +(NSArray *) validEmots;
 +(NSInteger) maxEmots;

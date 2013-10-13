@@ -17,12 +17,12 @@
 @property (strong, nonatomic) NSString *operation;
 
 -(id) initWithCardCount:(NSInteger) count
-              usingDeck:(Deck *) deck;
+              usingDeck:(Deck *) deck
+          withOperators:(NSMutableArray*) operators;
+
 - (void) flipCardAtIndex:(NSInteger) index;
 -(Card *) cardAtIndex :(NSInteger) index;
 -(void) checkAnswer:(NSInteger)index
-      enteredAnswer:(NSString *) enteredAnswer;
-
-
+    enteredAnswer:(NSString *) enteredAnswer;
 
 @end

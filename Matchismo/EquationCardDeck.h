@@ -9,5 +9,7 @@
 #import "deck.h"
 
 @interface EquationCardDeck : Deck
+-(id) initWithOperators:(NSMutableArray*) operators;
+
 
 @end

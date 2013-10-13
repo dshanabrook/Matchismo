@@ -15,12 +15,13 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UITextField *enteredAnswerField;
 @property (weak, nonatomic) IBOutlet UIButton *deal;
+@property (weak, nonatomic) IBOutlet UIButton *clearKeyboardButton;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @property (strong, nonatomic) FlashCardGame *game;
--(IBAction)flipCard:(UIButton * )sender;
 @property (weak, nonatomic) IBOutlet UILabel *correctnessLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *correctnessLabel2;
+    //@property (weak, nonatomic) IBOutlet UIButton *clearKeyboardButton;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addition;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *subtraction;
@@ -30,7 +31,12 @@
 @property (nonatomic) NSUInteger currentCardIndex;
 @property (nonatomic) int flipCount;
 
+@property (strong, nonatomic) NSMutableArray *operators;
 
+-(void) addAnOperator:(NSString *) anOperator;
+-(void) resetOperators;
+
+-(IBAction)flipCard:(UIButton * )sender;
 -(void) setCardButtons:(NSArray *)cardButtons;
 
 -(void) updateUI;

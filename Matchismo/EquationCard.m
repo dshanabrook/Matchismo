@@ -13,7 +13,6 @@
 @synthesize firstTerm = _firstTerm;
 @synthesize secondTerm = _secondTerm;
 @synthesize operator = _operator;
-@synthesize validOperators ;
 
 
 +(NSArray *) validFirstTerms {
@@ -71,15 +70,4 @@
     }
     self.answer = theAnswer;
 }
-
--(void) addOperator:(NSString *) thisOperator{
-    if (!self.validOperators) {
-        self.validOperators = [[NSMutableArray alloc]init];
-    }
-    [self.validOperators addObject:thisOperator];
-    
-}
-
-
-
 @end

@@ -14,8 +14,6 @@
 @property (strong, nonatomic) NSString *operator;
 @property (strong, nonatomic) NSString *secondTerm;
 @property  int answer;
-@property (strong, nonatomic) NSMutableArray *validOperators;
-
 +(NSArray *) validFirstTerms;
 +(NSArray *) validSecondTerms;
     //+(NSMutableArray *) validOperators;

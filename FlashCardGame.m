@@ -20,7 +20,8 @@
 #define MATCH_BONUS 4
 
 -(id) initWithCardCount:(NSInteger)count
-              usingDeck:(Deck *)deck {
+              usingDeck:(Deck *)deck
+          withOperators:(NSMutableArray*) operators{
     self = [super init];
     if (self) {
         self.enteredAnswerIsCorrect = NO;

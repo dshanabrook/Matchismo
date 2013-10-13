@@ -10,10 +10,10 @@
 
 @implementation EquationCardDeck
 
--(id) init{
+-(id) initWithOperators:(NSMutableArray *) operators{
     self = [super init];
     if (self){
-        for (NSString *operator in [EquationCard validOperators]){
+        for (NSString *operator in operators){
             for (NSString *second in [EquationCard validSecondTerms]){
                 for (NSString *first in [EquationCard validFirstTerms]){
                         //first must be bigger or equal to second to avoid neg numbers
@@ -37,4 +37,7 @@
     }
     return self;
 }
+
+
+
 @end
