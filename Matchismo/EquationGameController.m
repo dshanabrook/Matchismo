@@ -33,7 +33,6 @@
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable ;
-            //  cardButton.alpha =  card.isUnplayable ? 0.3 : 1.0;
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score:%d", self.game.score];
@@ -79,7 +78,35 @@
     return YES;
 }
 
+- (IBAction)additionToggle:(id)sender {
+    if ([(UISwitch*)sender isOn])
+        [self.game makeOperatorAvailable:@"+"];
+    else
+        [self.game makeOperatorNotAvailable:@"+"];
+    
+    [self.game reDealWithCardCount:[self.cardButtons count]] ;
+    [self updateUI];
+}
+- (IBAction)subtractionToggle:(id)sender {
+    if ([(UISwitch*)sender isOn])
+        [self.game makeOperatorAvailable:@"-"];
+    else
+        [self.game makeOperatorNotAvailable:@"-"];
+    
+    [self.game reDealWithCardCount:[self.cardButtons count]] ;
+    [self updateUI];
+}
 
+- (IBAction)multiplicationToggle:(id)sender {
+    if ([(UISwitch*)sender isOn])
+        [self.game makeOperatorAvailable:@"x"];
+    else
+        [self.game makeOperatorNotAvailable:@"x"];
+    
+    [self.game reDealWithCardCount:[self.cardButtons count]] ;
+    [self updateUI];
+}
+/*
 -(IBAction)additionButton:(id)sender{
     [(UIButton*)sender setSelected:![sender isSelected]];
     if ([(UIButton*)sender isSelected])
@@ -113,6 +140,7 @@
     [self.game reDealWithCardCount:[self.cardButtons count]] ;
     [self updateUI];
 }
+ */
 /*
 - (IBAction)allButton:(id)sender{
     [(UIButton*)sender setSelected:![sender isSelected]];

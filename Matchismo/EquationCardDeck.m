@@ -40,7 +40,6 @@
 -(EquationCard *) drawRandomCard {
     EquationCard *randomCard = nil;
         //loop until you find a random card (that is available) and you still have available cards left)
-    int temp = [self countAvailableCards];
     while (([self countAvailableCards] > 0) & (!randomCard)) {
             unsigned index = arc4random() % [self.cards count];
         if ([self.cards[index] isAvailable]){

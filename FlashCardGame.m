@@ -73,8 +73,10 @@
     EquationCard *cardAtButton = [self cardAtButtonIndex:index];
         //correct
     if ([cardAtButton.answerView isEqualToString:enteredAnswer]){
-        if (!cardAtButton.missedEquation)
+        if (!cardAtButton.missedEquation){
             cardAtButton.masteredEquation = YES;
+            cardAtButton.isAvailable = NO;
+        }
         cardAtButton.unplayable = YES;
         cardAtButton.contents = [cardAtButton.contents stringByAppendingString:cardAtButton.answerView];
         self.score += MATCH_BONUS;
@@ -85,6 +87,7 @@
         self.score -= WRONG_ANSWER_PENALTY;
         cardAtButton.faceUp = NO;
         self.enteredAnswerIsCorrect = NO;
+
     }
 }
 
@@ -97,12 +100,13 @@
             aCard.isAvailable = YES;  
     }
 }
-    /*
--(void) makeOperatorNotAvailable:(NSString *) operatorToRemove{
-        for (EquationCard *aCard in self.deck)
-            if ([aCard.operator isEqualToString:operatorToRemove])
-                aCard.isAvailable = NO;
+    // makes all cards with this operator unavailable
+-(void) makeOperatorNotAvailable:(NSString *) operatorToAdd{
+    
+    for (int i=0; i < [self.deck countAllCards]; i++){
+        EquationCard *aCard = [self.deck.cards objectAtIndex:i] ;
+        if ([aCard.operator isEqualToString:operatorToAdd])
+            aCard.isAvailable = NO;
+    }
 }
-
-*/
 @end

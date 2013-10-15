@@ -26,13 +26,15 @@
     //@property (weak, nonatomic) IBOutlet UIButton *clearKeyboardButton;
 
 
-
+/*
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *subtractButton;
 @property (weak, nonatomic) IBOutlet UIButton *timesButton;
-    //@property (weak, nonatomic) IBOutlet UIButton *allButton;
+@property (weak, nonatomic) IBOutlet UIButton *allButton;
+ */
 @property (weak, nonatomic) IBOutlet UISwitch *additionToggle;
 @property (weak, nonatomic) IBOutlet UISwitch *subtractionToggle;
+@property (strong, nonatomic) IBOutlet UIView *multiplicationToggle;
 
 @property (weak, nonatomic) IBOutlet UIButton *reDeal;
 

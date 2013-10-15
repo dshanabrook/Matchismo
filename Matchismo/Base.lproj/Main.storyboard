@@ -1160,7 +1160,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U1O-ru-wOk">
-                                <rect key="frame" x="522" y="132" width="46" height="30"/>
+                                <rect key="frame" x="428" y="134" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="☼">
@@ -1196,44 +1196,47 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="AWb-Og-Gfd">
-                                <rect key="frame" x="522" y="29" width="46" height="30"/>
+                                <rect key="frame" x="10" y="168" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="additionButton:" destination="bgG-5x-f02" eventType="touchUpInside" id="LLW-Px-BXz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IbO-lX-8Cl">
-                                <rect key="frame" x="522" y="53" width="46" height="30"/>
+                                <rect key="frame" x="10" y="206" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="—">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="subtractButton:" destination="bgG-5x-f02" eventType="touchUpInside" id="ZUU-qo-lUj"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="tbX-6p-9AN">
-                                <rect key="frame" x="530" y="81" width="30" height="30"/>
+                                <rect key="frame" x="18" y="234" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="x">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="D4b-CA-1y4">
-                                <rect key="frame" x="511" y="170" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label=""/>
-                                <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="offImage">    [self.game reDealWithCardCount:[self.cardButtons count]] ;
-</string>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="xMU-Dj-JNI">
-                                <rect key="frame" x="511" y="209" width="51" height="31"/>
+                                <rect key="frame" x="49" y="167" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="additionToggle:" destination="bgG-5x-f02" eventType="valueChanged" id="C94-GS-95E"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="eeR-HW-2kp">
+                                <rect key="frame" x="49" y="206" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="subtractionToggle:" destination="bgG-5x-f02" eventType="valueChanged" id="rGM-OS-PBF"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="rQD-G7-BNe">
+                                <rect key="frame" x="49" y="240" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="multiplicationToggle:" destination="bgG-5x-f02" eventType="valueChanged" id="C1s-8F-yYw"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1242,18 +1245,16 @@
                     <tabBarItem key="tabBarItem" title="Math" id="Pn4-WB-Epw"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="addButton" destination="AWb-Og-Gfd" id="xBC-W8-sG0"/>
-                        <outlet property="additionToggle" destination="D4b-CA-1y4" id="eV4-L4-kCh"/>
+                        <outlet property="additionToggle" destination="xMU-Dj-JNI" id="VO3-LR-dP8"/>
                         <outlet property="clearKeyboardButton" destination="U1O-ru-wOk" id="Kbb-rj-xHY"/>
                         <outlet property="correctnessLabel1" destination="Ah7-Nm-6wd" id="1Bu-6S-tQI"/>
                         <outlet property="correctnessLabel2" destination="9Ut-G2-AkH" id="IZ1-Bv-rbJ"/>
                         <outlet property="deal" destination="3fq-1Z-BPM" id="JBh-ir-AdM"/>
                         <outlet property="enteredAnswerField" destination="tmQ-Et-ThE" id="OsN-e1-gu3"/>
+                        <outlet property="multiplicationToggle" destination="rQD-G7-BNe" id="akt-zn-w7L"/>
                         <outlet property="reDeal" destination="3fq-1Z-BPM" id="VXS-QE-LO2"/>
                         <outlet property="scoreLabel" destination="clA-Mv-NRh" id="EaF-6q-o1P"/>
-                        <outlet property="subtractButton" destination="IbO-lX-8Cl" id="jgW-fN-djb"/>
-                        <outlet property="subtractionToggle" destination="xMU-Dj-JNI" id="d4h-2P-Prs"/>
-                        <outlet property="timesButton" destination="tbX-6p-9AN" id="rHA-Iq-OUJ"/>
+                        <outlet property="subtractionToggle" destination="eeR-HW-2kp" id="nup-qF-yY9"/>
                         <outletCollection property="cardButtons" destination="Z7e-Hn-JbC" id="KpV-Kh-njK"/>
                         <outletCollection property="cardButtons" destination="nDW-we-rCE" id="RWI-2V-fN6"/>
                         <outletCollection property="cardButtons" destination="bwu-dC-RFL" id="1Tg-ZF-d1d"/>
@@ -1278,7 +1279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSx-z5-yLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="-450"/>
+            <point key="canvasLocation" x="413" y="-431"/>
         </scene>
         <!--Set Game View Controller - Sets Game-->
         <scene sceneID="RiS-3Z-PMU">
@@ -1578,12 +1579,6 @@
             <point key="canvasLocation" x="720" y="846"/>
         </scene>
     </scenes>
-    <resources>
-        <image width="16" height="16">
-            <string key="name">    [self.game reDealWithCardCount:[self.cardButtons count]] ;
-</string>
-        </image>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
