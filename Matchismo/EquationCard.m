@@ -29,8 +29,11 @@
 +(NSArray *) validOperators {
     return @[@"+",@"-",@"x"];
 }
-  //,@"÷"
 
+-(id) init{
+    self = [super init];
+    return self;
+}
 
 -(NSString *) firstTerm {return _firstTerm ? _firstTerm:@"0";}
 -(NSString *) secondTerm {return _secondTerm ? _secondTerm:@"0";}
@@ -68,6 +71,11 @@
     }else  if ([self.operator  isEqual: @"x"]) {
         theAnswer = firstInt * secondInt;
     }
-    self.answer = theAnswer;
+    self.answerView = [NSString stringWithFormat:@"%d",theAnswer];;
+}
+
+-(int) getIntFromAnswerView{
+    return [self.answerView intValue];
 }
 @end
+

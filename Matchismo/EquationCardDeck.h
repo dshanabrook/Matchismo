@@ -6,10 +6,16 @@
 //  Copyright (c) 2013 david hilton shanabrook. All rights reserved.
 //
 
-#import "deck.h"
+#import "Deck.h"
 
 @interface EquationCardDeck : Deck
--(id) initWithOperators:(NSMutableArray*) operators;
-
+-(id) init;
+-(EquationCard *) drawRandomCard;
+-(int) countAvailableCards;
+-(int) countAllCards;
+-(void) makeNegativesNotAvailable;
+-(void) makeUpperBound:(NSString *) upperBound;
+-(void) makeOperatorNotAvailable:(NSString *) operatorToRemove;
+-(void) makeOperatorAvailable:(NSString *) operatorToAdd;
 
 @end

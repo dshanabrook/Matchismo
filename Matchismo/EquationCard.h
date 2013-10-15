@@ -13,7 +13,11 @@
 @property (strong, nonatomic) NSString *firstTerm;
 @property (strong, nonatomic) NSString *operator;
 @property (strong, nonatomic) NSString *secondTerm;
-@property  int answer;
+@property (strong, nonatomic) NSString *answerView;
+@property (nonatomic) bool masteredEquation;
+@property (nonatomic) bool missedEquation;
+@property (nonatomic) bool isAvailable;
+
 +(NSArray *) validFirstTerms;
 +(NSArray *) validSecondTerms;
     //+(NSMutableArray *) validOperators;
@@ -21,6 +25,6 @@
 
 
 -(void) calculateAnswer;
-
-
+-(id) init;
+-(int) getIntFromAnswerView;
 @end
