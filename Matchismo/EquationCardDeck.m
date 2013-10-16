@@ -15,24 +15,16 @@
         for (NSString *operator in [EquationCard validOperators]){
             for (NSString *second in [EquationCard validSecondTerms]){
                 for (NSString *first in [EquationCard validFirstTerms]) {
-                    EquationCard *card = [[EquationCard alloc] init];
-                    [card setFirstTerm:first];
-                    [card setSecondTerm:second];
-                    [card setOperator:operator];
-                    [card calculateAnswer];
-                    card.contents = [first stringByAppendingString:operator];
-                    card.contents = [card.contents stringByAppendingString:second];
-                    card.contents = [card.contents stringByAppendingString:@"="];
-                    card.masteredEquation = NO;
-                    card.missedEquation = NO;
-                    card.isAvailable = NO;
-                    [self addCard:card atTop:YES];
+                    
+                    EquationCard *aCard = [[EquationCard alloc] initWithFirstTerm:first
+                                                                   withSecondTerm:second
+                                                                     withOperator:operator];
+                    [self addCard:aCard atTop:YES];
                 }
             }
         }
         [self makeOperatorAvailable:@"+"];
     }
-    
     return self;
 }
 
@@ -41,6 +33,7 @@
     EquationCard *randomCard = nil;
         //loop until you find a random card (that is available) and you still have available cards left)
     while (([self countAvailableCards] > 0) & (!randomCard)) {
+        int left = [self countAvailableCards];
             unsigned index = arc4random() % [self.cards count];
         if ([self.cards[index] isAvailable]){
             randomCard = self.cards[index];

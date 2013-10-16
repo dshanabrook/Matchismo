@@ -42,10 +42,12 @@
 
         //already have a deck, just need to deal.
 -(void) reDealWithCardCount:(NSInteger) count{
+    NSString *blank = @"";
+    EquationCard *blankCard = [[EquationCard alloc] initWithFirstTerm:blank withSecondTerm:blank withOperator:blank];
     for (int i=0; i < count; i++){
         EquationCard *card = [self.deck drawRandomCard];
         if (!card)
-            self.cards[i] = nil ;
+            self.cards[i] = blankCard ;
         else
             self.cards[i] = card;
     }

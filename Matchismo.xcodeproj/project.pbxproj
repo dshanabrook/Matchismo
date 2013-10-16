@@ -130,6 +130,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		791D81C0180F1D1F00E36AAF /* other games */ = {
+			isa = PBXGroup;
+			children = (
+				79145E8817C5C36D00AD1EB7 /* SetCard.h */,
+				79145E8917C5C36D00AD1EB7 /* SetCard.m */,
+				79C6FB3617BA88A10022BB4E /* PlayingCard.h */,
+				79C6FB3717BA88A10022BB4E /* PlayingCard.m */,
+				7938C00317C46B8A000D8CBB /* EmotCard.h */,
+				7938C00417C46B8A000D8CBB /* EmotCard.m */,
+				79DA163217C46E7B00C77860 /* EmotCardDeck.h */,
+				79DA163317C46E7B00C77860 /* EmotCardDeck.m */,
+				79145E8517C5C24200AD1EB7 /* SetCardDeck.h */,
+				79145E8617C5C24200AD1EB7 /* SetCardDeck.m */,
+				79C8E9B317BB15EB001D7836 /* PlayingCardDeck.h */,
+				79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */,
+				79D9DF8817BBF91400B47771 /* CardMatchingGame.h */,
+				79D9DF8917BBF91400B47771 /* CardMatchingGame.m */,
+			);
+			name = "other games";
+			sourceTree = "<group>";
+		};
+		791D81C1180F1D3200E36AAF /* other games */ = {
+			isa = PBXGroup;
+			children = (
+				79ABBF4117C58C2E00D14037 /* GenericViewController.h */,
+				79ABBF4217C58C2E00D14037 /* GenericViewController.m */,
+				79DA163817C472A600C77860 /* PictureGameViewController.h */,
+				79DA163917C472A600C77860 /* PictureGameViewController.m */,
+				7925F9BC17B9B7270007B877 /* CardGameViewController.h */,
+				7925F9BD17B9B7270007B877 /* CardGameViewController.m */,
+				79441FBB17C72CE900C02B8B /* SetGameViewController.h */,
+				79441FBC17C72CE900C02B8B /* SetGameViewController.m */,
+			);
+			name = "other games";
+			sourceTree = "<group>";
+		};
 		7925F99B17B9B7260007B877 = {
 			isa = PBXGroup;
 			children = (
@@ -206,24 +242,11 @@
 		79C6FB3017BA81300022BB4E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				791D81C0180F1D1F00E36AAF /* other games */,
 				79C6FB3317BA835A0022BB4E /* Card.h */,
 				79C6FB3417BA835A0022BB4E /* Card.m */,
 				79C8E9B017BB0F54001D7836 /* Deck.h */,
 				79C8E9B117BB0F54001D7836 /* Deck.m */,
-				79145E8817C5C36D00AD1EB7 /* SetCard.h */,
-				79145E8917C5C36D00AD1EB7 /* SetCard.m */,
-				79C6FB3617BA88A10022BB4E /* PlayingCard.h */,
-				79C6FB3717BA88A10022BB4E /* PlayingCard.m */,
-				7938C00317C46B8A000D8CBB /* EmotCard.h */,
-				7938C00417C46B8A000D8CBB /* EmotCard.m */,
-				79DA163217C46E7B00C77860 /* EmotCardDeck.h */,
-				79DA163317C46E7B00C77860 /* EmotCardDeck.m */,
-				79145E8517C5C24200AD1EB7 /* SetCardDeck.h */,
-				79145E8617C5C24200AD1EB7 /* SetCardDeck.m */,
-				79C8E9B317BB15EB001D7836 /* PlayingCardDeck.h */,
-				79C8E9B417BB15EB001D7836 /* PlayingCardDeck.m */,
-				79D9DF8817BBF91400B47771 /* CardMatchingGame.h */,
-				79D9DF8917BBF91400B47771 /* CardMatchingGame.m */,
 				79721F0217FF93720094E9A4 /* EquationCard.h */,
 				79721F0317FF93720094E9A4 /* EquationCard.m */,
 				79721F0517FFA20C0094E9A4 /* EquationCardDeck.h */,
@@ -247,14 +270,7 @@
 		79C6FB3217BA81B10022BB4E /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				79ABBF4117C58C2E00D14037 /* GenericViewController.h */,
-				79ABBF4217C58C2E00D14037 /* GenericViewController.m */,
-				79DA163817C472A600C77860 /* PictureGameViewController.h */,
-				79DA163917C472A600C77860 /* PictureGameViewController.m */,
-				7925F9BC17B9B7270007B877 /* CardGameViewController.h */,
-				7925F9BD17B9B7270007B877 /* CardGameViewController.m */,
-				79441FBB17C72CE900C02B8B /* SetGameViewController.h */,
-				79441FBC17C72CE900C02B8B /* SetGameViewController.m */,
+				791D81C1180F1D3200E36AAF /* other games */,
 				79721F0817FFA6950094E9A4 /* EquationGameController.h */,
 				79721F0917FFA6950094E9A4 /* EquationGameController.m */,
 			);

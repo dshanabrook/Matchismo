@@ -106,57 +106,6 @@
     [self.game reDealWithCardCount:[self.cardButtons count]] ;
     [self updateUI];
 }
-/*
--(IBAction)additionButton:(id)sender{
-    [(UIButton*)sender setSelected:![sender isSelected]];
-    if ([(UIButton*)sender isSelected])
-        [self.game makeOperatorAvailable:@"+"];
-    else
-        [self.game makeOperatorNotAvailable:@"+"];
-    
-    [self.game reDealWithCardCount:[self.cardButtons count]] ;
-    [self updateUI];
-}
-
--(IBAction)subtractButton:(id)sender{
-    [(UIButton*)sender setSelected:![sender isSelected]];
-    if ([(UIButton*)sender isSelected])
-        [self.game makeOperatorAvailable:@"-"];
-    else
-        [self.game makeOperatorNotAvailable:@"-"];
-    
-    [self.game reDealWithCardCount:[self.cardButtons count]] ;
-    [self updateUI];
-}
-
-
-
-- (IBAction)timesButton:(id)sender {
-    [(UIButton*)sender setSelected:![sender isSelected]];
-    if ([(UIButton*)sender isSelected])
-        [self.game makeOperatorAvailable:@"x"];
-    else
-        [self.game makeOperatorNotAvailable:@"x"];
-    [self.game reDealWithCardCount:[self.cardButtons count]] ;
-    [self updateUI];
-}
- */
-/*
-- (IBAction)allButton:(id)sender{
-    [(UIButton*)sender setSelected:![sender isSelected]];
-    if ([(UIButton*)sender isSelected]) {
-        [self.game makeOperatorAvailable: @"+"];
-        [self.game makeOperatorAvailable:@"-"];
-        [self.game makeOperatorAvailable:@"x"];
-    }
-    else {
-        [self.game makeOperatorNotAvailable: @"+"];
-        [self.game makeOperatorNotAvailable:@"-"];
-        [self.game makeOperatorNotAvailable:@"x"];
-    }
-}
- */
-
     //fancy moving labels
 -(void) makeLabelsGo:(UILabel *) label
             withText:(NSString *) theText{

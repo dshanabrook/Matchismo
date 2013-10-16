@@ -17,14 +17,16 @@
 @property (nonatomic) bool masteredEquation;
 @property (nonatomic) bool missedEquation;
 @property (nonatomic) bool isAvailable;
+@property (strong, nonatomic) NSMutableArray *termRange;
 
 +(NSArray *) validFirstTerms;
 +(NSArray *) validSecondTerms;
-    //+(NSMutableArray *) validOperators;
 +(NSMutableArray *) validOperators;
 
-
+-(void) setupTermRange:(NSInteger *)termUpperBound;
 -(void) calculateAnswer;
--(id) init;
+-(id) initWithFirstTerm:(NSString *) first
+         withSecondTerm:(NSString *) second
+           withOperator:(NSString *) operator;
 -(int) getIntFromAnswerView;
 @end

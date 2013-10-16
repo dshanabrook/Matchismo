@@ -27,16 +27,6 @@
 
 -(id) init {
     self = [super init];
-    
-        //    NSDictionary * validColorsDict =
-        //         @{@"green": [UIColor greenColor],
-        //                 @"red": [UIColor redColor],
-        //                 @"blue":  [UIColor blueColor]
-        //                 };
-        //   NSDictionary * colorDict = [SetCard validColorsDict];
-    
-        // int totCards = 0;
-    
     if (self) {
         for (NSString *keyColor in [SetCard validColorsDict]){
             for (NSString *indexSymbol in [SetCard validSymbols]){

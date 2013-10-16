@@ -16,13 +16,48 @@
 
 
 +(NSArray *) validFirstTerms {
-        //   return @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
-    return @[@"0",@"1",@"2",@"3",@"4"];
+        return @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+        //return @[@"0",@"1",@"2"];
 }
 
 +(NSArray *) validSecondTerms {
-    return @[@"0",@"1",@"2",@"3",@"4"];
+    return @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+
+        // return @[@"0",@"1",@"2",@"3",@"4"];
 }
+
+-(id) initWithFirstTerm:(NSString *) first
+         withSecondTerm:(NSString *) second
+           withOperator:(NSString *) operator{
+    self = [super init];
+    if (self) {
+        [self setFirstTerm:first];
+            //which is the best way, to use the +(validFirstTerms) or a method -(validFirstTerms) or just like below
+        self.firstTerm = first;
+        [self setSecondTerm:second];
+        [self setOperator:operator];
+        [self calculateAnswer];
+        self.contents = [first stringByAppendingString:operator];
+        self.contents = [self.contents stringByAppendingString:second];
+        self.contents = [self.contents stringByAppendingString:@"="];
+        self.masteredEquation = NO;
+        self.missedEquation = NO;
+        self.isAvailable = NO;
+        
+    }
+    return self;
+}
+
+-(void) setupTermRange:(NSInteger *) termUpperBound {
+        //NSMutableArray* termRange = [[NSMutableArray alloc] init];
+    int i = 0;
+    
+    for(i=0; i<(int) termUpperBound; i++) {
+        NSNumber* num = [NSNumber numberWithInt:i]; // use i or random numbers
+        [self.termRange addObject:num];
+    }
+}
+
 
     //+(NSMutableArray *) validOperators {
     //    return [[NSMutableArray alloc] initWithObjects:nil];}
@@ -31,10 +66,6 @@
     return @[@"+",@"-",@"x"];
 }
 
--(id) init{
-    self = [super init];
-    return self;
-}
 
 -(NSString *) firstTerm {return _firstTerm ? _firstTerm:@"0";}
 -(NSString *) secondTerm {return _secondTerm ? _secondTerm:@"0";}
