@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		79145E8717C5C24200AD1EB7 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 79145E8617C5C24200AD1EB7 /* SetCardDeck.m */; };
 		79145E8A17C5C36D00AD1EB7 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 79145E8917C5C36D00AD1EB7 /* SetCard.m */; };
+		791C921B1813706300DF9CD1 /* LNNumberpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C921A1813706300DF9CD1 /* LNNumberpad.m */; };
+		791C921E1813707300DF9CD1 /* LNNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 791C921D1813707300DF9CD1 /* LNNumberpad.xib */; };
+		791C92201813707900DF9CD1 /* LNHexNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 791C921F1813707900DF9CD1 /* LNHexNumberpad.xib */; };
 		7925F9A817B9B7260007B877 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7925F9A717B9B7260007B877 /* Foundation.framework */; };
 		7925F9AA17B9B7260007B877 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7925F9A917B9B7260007B877 /* CoreGraphics.framework */; };
 		7925F9AC17B9B7260007B877 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7925F9AB17B9B7260007B877 /* UIKit.framework */; };
@@ -55,6 +58,10 @@
 		79145E8617C5C24200AD1EB7 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardDeck.m; sourceTree = "<group>"; };
 		79145E8817C5C36D00AD1EB7 /* SetCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCard.h; sourceTree = "<group>"; };
 		79145E8917C5C36D00AD1EB7 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCard.m; sourceTree = "<group>"; };
+		791C921A1813706300DF9CD1 /* LNNumberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNNumberpad.m; sourceTree = "<group>"; };
+		791C921C1813706B00DF9CD1 /* LNNumberpad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNNumberpad.h; sourceTree = "<group>"; };
+		791C921D1813707300DF9CD1 /* LNNumberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LNNumberpad.xib; sourceTree = "<group>"; };
+		791C921F1813707900DF9CD1 /* LNHexNumberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LNHexNumberpad.xib; sourceTree = "<group>"; };
 		7925F9A417B9B7260007B877 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7925F9A717B9B7260007B877 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7925F9A917B9B7260007B877 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +140,8 @@
 		791D81C0180F1D1F00E36AAF /* other games */ = {
 			isa = PBXGroup;
 			children = (
+				791C921C1813706B00DF9CD1 /* LNNumberpad.h */,
+				791C921A1813706300DF9CD1 /* LNNumberpad.m */,
 				79145E8817C5C36D00AD1EB7 /* SetCard.h */,
 				79145E8917C5C36D00AD1EB7 /* SetCard.m */,
 				79C6FB3617BA88A10022BB4E /* PlayingCard.h */,
@@ -260,6 +269,8 @@
 		79C6FB3117BA81910022BB4E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				791C921F1813707900DF9CD1 /* LNHexNumberpad.xib */,
+				791C921D1813707300DF9CD1 /* LNNumberpad.xib */,
 				7925F9B917B9B7260007B877 /* Main.storyboard */,
 				79CC6CE11800E58000DA46BE /* TextField.h */,
 				79CC6CE21800E58000DA46BE /* TextField.m */,
@@ -357,8 +368,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791C921E1813707300DF9CD1 /* LNNumberpad.xib in Resources */,
 				7925F9C017B9B7270007B877 /* Images.xcassets in Resources */,
 				7925F9B217B9B7260007B877 /* InfoPlist.strings in Resources */,
+				791C92201813707900DF9CD1 /* LNHexNumberpad.xib in Resources */,
 				7925F9BB17B9B7270007B877 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +401,7 @@
 				79C6FB3817BA88A10022BB4E /* PlayingCard.m in Sources */,
 				79721F0717FFA20C0094E9A4 /* EquationCardDeck.m in Sources */,
 				79D9DF8A17BBF91400B47771 /* CardMatchingGame.m in Sources */,
+				791C921B1813706300DF9CD1 /* LNNumberpad.m in Sources */,
 				79721F0417FF93720094E9A4 /* EquationCard.m in Sources */,
 				79CC6CE31800E58000DA46BE /* TextField.m in Sources */,
 				794944941808E32C003717D3 /* FlashCardGame.m in Sources */,

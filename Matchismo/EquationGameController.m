@@ -9,10 +9,17 @@
 #import "EquationGameController.h"
 #import "TextField.h"
 #import "FlashCardGame.h"
+#import "LNNumberpad.h"
 
 @implementation EquationGameController
 @synthesize game = _game;
 @synthesize enteredAnswerField;
+
+-(void) viewDidLoad{
+    [super viewDidLoad];
+    self.enteredAnswerField.inputView  = [LNNumberpad defaultLNNumberpad];
+
+}
     //This is the first thing that happens.  20 cardbuttons are already there.
 - (void) setCardButtons:(NSArray *)cardButtons{
     _cardButtons = cardButtons;
@@ -70,7 +77,7 @@
 }
     //enter answer
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-         textField.tag = 1;
+	    textField.tag = 1;
     self.game.enteredAnswer = textField.text;
     [self.game checkAnswerAtIndex:self.currentCardIndex
                        with:textField.text];
