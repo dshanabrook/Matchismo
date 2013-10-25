@@ -13,7 +13,7 @@
     self = [super init];
     if (self){
         for (NSString *operator in [EquationCard validOperators]){
-            for (NSString *second in [EquationCard validSecondTerms]){
+            for (NSString *second in [EquationCard validFirstTerms]){
                 for (NSString *first in [EquationCard validFirstTerms]) {
                     
                     EquationCard *aCard = [[EquationCard alloc] initWithFirstTerm:first

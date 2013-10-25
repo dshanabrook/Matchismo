@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNNumberpad.h"
+
 #import "FlashCardGame.h"
 
 
@@ -19,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *deal;
 @property (weak, nonatomic) IBOutlet UIButton *clearKeyboardButton;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UIButton *checkAnswerButton;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *correctnessLabel1;

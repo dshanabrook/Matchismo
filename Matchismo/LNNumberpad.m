@@ -178,13 +178,6 @@
     }
 }
 
-// The done button was just pressed on the number pad
-- (IBAction)numberpadDonePressed:(UIButton *)sender {
-        if (self.targetTextInput) {
-            [self.targetTextInput resignFirstResponder];
-        }
-}
-
 #pragma mark - text replacement routines
 
 // Check delegate methods to see if we should change the characters in range

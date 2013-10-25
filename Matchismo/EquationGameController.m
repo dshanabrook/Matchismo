@@ -7,15 +7,16 @@
 //
 
 #import "EquationGameController.h"
-#import "TextField.h"
 #import "FlashCardGame.h"
 #import "LNNumberpad.h"
+
 
 @implementation EquationGameController
 @synthesize game = _game;
 @synthesize enteredAnswerField;
 
 -(void) viewDidLoad{
+    NSLog(@"viewDidLoad");
     [super viewDidLoad];
     self.enteredAnswerField.inputView  = [LNNumberpad defaultLNNumberpad];
 
@@ -34,6 +35,8 @@
 }
 
 -(void) updateUI {
+    NSLog(@"updateUI");
+
     for (UIButton *cardButton in self.cardButtons){
         Card  *card = [self.game cardAtButtonIndex:[self.cardButtons indexOfObject:cardButton]];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
@@ -57,9 +60,12 @@
 
     //Buttons********************************************
 - (IBAction)flipCard:(UIButton *)sender {
+    NSLog(@"flipCard");
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
         //need this index
     self.currentCardIndex = [self.cardButtons indexOfObject:sender];
+    
+    
     UITextField *theAnswerField = (UITextField*)[self.view viewWithTag:1];
     theAnswerField.text = @"";
     self.game.enteredAnswerIsCorrect = NO;
@@ -68,19 +74,31 @@
     }
 
 -(IBAction)clearKeyboardButton:(id)sender {
+    NSLog(@"clearKeyboardButton");
     [self.view endEditing:YES];
+}
+
+-(IBAction)checkAnswerButton:(id)sender{
+    NSLog(@"checkAnswerButton");
+    self.game.enteredAnswer = enteredAnswerField.text;
+    [self.game checkAnswerAtIndex:self.currentCardIndex
+                             with:self.game.enteredAnswer];
+    [self updateUI];
 }
 
 - (IBAction)deal:(UIButton *)sender {
     self.game = nil;
     [self updateUI];
 }
+
+
     //enter answer
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-	    textField.tag = 1;
+    NSLog(@"textFieldShouldReturn");
+    textField.tag = 1;
     self.game.enteredAnswer = textField.text;
     [self.game checkAnswerAtIndex:self.currentCardIndex
-                       with:textField.text];
+                             with:textField.text];
     [self updateUI];
     return YES;
 }

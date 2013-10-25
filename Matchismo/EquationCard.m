@@ -16,15 +16,18 @@
 
 
 +(NSArray *) validFirstTerms {
-        return @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+        return @[@"0",@"1",@"2",@"3",@"4"
+                 //  ,@"4",@"5",@"6",@"7",@"8",@"9"
+                 ];
         //return @[@"0",@"1",@"2"];
 }
-
+/*
 +(NSArray *) validSecondTerms {
     return @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
 
         // return @[@"0",@"1",@"2",@"3",@"4"];
 }
+ */
 
 -(id) initWithFirstTerm:(NSString *) first
          withSecondTerm:(NSString *) second
@@ -77,7 +80,7 @@
     }
 }
 -(void) setSecondTerm:(NSString *) secondTerm{
-        if ([[EquationCard  validSecondTerms] containsObject:secondTerm]) {
+        if ([[EquationCard  validFirstTerms] containsObject:secondTerm]) {
             _secondTerm = secondTerm;
         }
 }

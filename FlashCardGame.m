@@ -69,6 +69,7 @@
     EquationCard *card = self.cards[index];
     if (!card.isUnplayable)
         card.faceUp = !card.faceUp;
+        //turn all other active cards face down implement this.
 }
 -(void) checkAnswerAtIndex:(NSInteger)index with:(NSString *) enteredAnswer{
     

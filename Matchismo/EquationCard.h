@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *termRange;
 
 +(NSArray *) validFirstTerms;
-+(NSArray *) validSecondTerms;
+    //+(NSArray *) validSecondTerms;
 +(NSMutableArray *) validOperators;
 
 -(void) setupTermRange:(NSInteger *)termUpperBound;
